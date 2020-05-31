@@ -1,0 +1,17 @@
+# stmm-input-openal pkg-config source file
+
+prefix=@STMMI_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: stmm-input-openal
+Description: Gtk main loop based device manager for OpenAL playback devices.
+Version: @STMM_INPUT_OPENAL_VERSION@
+URL: http://www.efanomars.com/libraries/stmm-input-openal
+# Beware! The space between the library name and the comparison (>=) is necessary!
+Requires: stmm-input-au >= @STMM_INPUT_OPENAL_REQ_STMM_INPUT_AU_VERSION@  stmm-input-ev >= @STMM_INPUT_OPENAL_REQ_STMM_INPUT_EV_VERSION@  alure >= @STMM_INPUT_OPENAL_REQ_ALURE_VERSION@  glibmm-2.4 >= @STMM_INPUT_OPENAL_REQ_GLIBMM_VERSION@
+Conflicts:
+Libs: -L${libdir} -lstmm-input-openal -lpthread
+Cflags: -I${includedir}/stmm-input-openal -I${includedir}
+

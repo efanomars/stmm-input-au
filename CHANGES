@@ -1,0 +1,43 @@
+stmm-input-au (0.6) unstable; urgency=low
+
+  * Fix doxy comments
+  * Improve build scripts
+  * Increase minor version
+
+ -- Stefano Marsili <efanomars@gmx.ch>  Mon, 01 Jun 2020 19:29:39 +0100
+
+stmm-input-au (0.5) unstable; urgency=low
+
+  * Use snapctl to warn user if sound not permitted
+  * Increase minor version
+
+ -- Stefano Marsili <efanomars@gmx.ch>  Thu, 30 Apr 2020 19:29:39 +0100
+
+stmm-input-au (0.4) unstable; urgency=low
+
+  * Website section
+  * Increase minor version
+
+ -- Stefano Marsili <efanomars@gmx.ch>  Sat, 25 Apr 2020 19:29:39 +0100
+
+stmm-input-au (0.3) unstable; urgency=low
+
+  * Fix cmake add_custom_target bug
+  * Add pylint3 to checkcode test
+  * Increase minor version
+
+ -- Stefano Marsili <efanomars@gmx.ch>  Fri, 10 Apr 2020 19:29:39 +0100
+
+stmm-input-au (0.2) unstable; urgency=low
+
+  * Add SndMgmtCapability device manager capability
+  * Fix dependency order openal -> au
+  * Increase minor version
+
+ -- Stefano Marsili <efanomars@gmx.ch>  Mon, 09 Mar 2020 19:29:39 +0100
+
+stmm-input-au (0.1) unstable; urgency=low
+
+  * Initial release
+
+ -- Stefano Marsili <efanomars@gmx.ch>  Mon, 02 Mar 2020 19:29:39 +0100

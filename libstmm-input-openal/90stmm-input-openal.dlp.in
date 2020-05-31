@@ -1,0 +1,16 @@
+@STMMI_OPENAL_INSTALL_LIB_PATH1@
+@STMMI_OPENAL_INSTALL_LIB_PATH2@
+@STMMI_OPENAL_INSTALL_LIB_PATH3@
+@STMMI_OPENAL_INSTALL_LIB_PATH4@
+#=#+#=# depends
+#=#+#=# description
+Plugin for the stmm-input-dl library that provides playback capability
+for sound output devices and an event type that informs event listeners
+about sound termination.
+Because of OpenAl's "not so good" device management, when multiple devices
+are present (ex. ear-phones), you might have to unplug and re-plug a device
+to make them work.
+Also note that if a sound is placed in space other than at the listener's
+position it might only "sound right" if it is in mono.
+#=#+#=# groups
+sound

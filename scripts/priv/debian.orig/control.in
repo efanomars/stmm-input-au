@@ -1,0 +1,88 @@
+Source: stmm-input-au
+Priority: optional
+Maintainer: Stefano Marsili <efanomars@gmx.ch>
+Build-Depends: debhelper (>= 9)
+             , cmake
+             , python3
+             , doxygen
+             , graphviz
+             , libstmm-input-dev (>= @STMM_INPUT_AU_REQ_STMM_INPUT_VERSION@)
+             , libstmm-input-ev-dev (>= @STMM_INPUT_OPENAL_REQ_STMM_INPUT_EV_VERSION@)
+             , libalure-dev (>= @STMM_INPUT_OPENAL_REQ_ALURE_VERSION@)
+             , libglibmm-2.4-dev (>= @STMM_INPUT_OPENAL_REQ_GLIBMM_VERSION@)
+Standards-Version: 3.9.8
+Section: libs
+Homepage: @STMMI_WEBSITE_SECTION@/stmm-input-au
+Vcs-Git: https://www.gitlab.com/efanomars/stmm-input-au.git
+#Vcs-Browser: https://www.gitlab.com/efanomars/stmm-input-au.git
+
+
+Package: libstmm-input-au@STMM_INPUT_AU_MAJOR_VERSION@
+Architecture: any
+Depends: libstmm-input@STMM_INPUT_AU_REQ_STMM_INPUT_MAJOR_VERSION@ (>= @STMM_INPUT_AU_REQ_STMM_INPUT_VERSION@)
+       , ${shlibs:Depends}, ${misc:Depends}
+Recommends: libstmm-input-gtk-dm, stmm-input-plugins
+Suggests: libstmm-input-openal
+Description: Device input event library - sound playback interfaces
+ Extensible device input event library for C++ (C++14).
+ .
+ This library provides a playback capability for sound output devices
+ and an event type that informs listeners about sound termination.
+
+Package: libstmm-input-au-dev
+Section: libdevel
+Architecture: any
+Depends: libstmm-input-au@STMM_INPUT_AU_MAJOR_VERSION@ (= ${binary:Version})
+       , libstmm-input-dev (>= @STMM_INPUT_AU_REQ_STMM_INPUT_VERSION@)
+       , ${misc:Depends}
+Recommends: libstmm-input-gtk-dm-dev
+Description: Device input event library - sound playback interfaces (develop)
+ Extensible device input event library for C++ (C++14).
+ .
+ This library provides a playback capability for sound output devices
+ and an event type that informs listeners about sound termination.
+ .
+ This package contains the development headers for the library found in
+ libstmm-input-gtk-au@STMM_INPUT_AU_MAJOR_VERSION@.
+
+
+
+Package: libstmm-input-openal@STMM_INPUT_OPENAL_MAJOR_VERSION@
+Architecture: any
+Depends: libstmm-input-au@STMM_INPUT_OPENAL_REQ_STMM_INPUT_AU_MAJOR_VERSION@ (>= @STMM_INPUT_OPENAL_REQ_STMM_INPUT_AU_VERSION@)
+       , libstmm-input-ev@STMM_INPUT_OPENAL_REQ_STMM_INPUT_EV_MAJOR_VERSION@ (>= @STMM_INPUT_OPENAL_REQ_STMM_INPUT_EV_VERSION@)
+       , libalure1 (>= @STMM_INPUT_OPENAL_REQ_ALURE_VERSION@)
+       , libglibmm-2.4-1v5 (>= @STMM_INPUT_OPENAL_REQ_GLIBMM_VERSION@)
+       , ${shlibs:Depends}, ${misc:Depends}
+Recommends: libstmm-input-gtk-dm, stmm-input-plugins
+Description: Device input event library - open-al sound playback
+ Extensible device input event library for C++ (C++14).
+ .
+ This library provides an open-al device manager that handles OpenAL playback
+ devices such as plugged in ear phones, etc.
+ The exposed devices implement the interfaces defined in libstmm-input-au@STMM_INPUT_AU_MAJOR_VERSION@.
+ .
+ While it can be linked directly by programs, the plugin device manager
+ provided by the libstmm-input-gtk-dm library will automatically load
+ this library at runtime as a plugin (unless it is disabled).
+
+Package: libstmm-input-openal-dev
+Section: libdevel
+Architecture: any
+Depends: libstmm-input-openal@STMM_INPUT_OPENAL_MAJOR_VERSION@ (= ${binary:Version})
+       , libstmm-input-au-dev (>= @STMM_INPUT_OPENAL_REQ_STMM_INPUT_AU_VERSION@)
+       , libstmm-input-ev-dev (>= @STMM_INPUT_OPENAL_REQ_STMM_INPUT_EV_VERSION@)
+       , libalure-dev (>= @STMM_INPUT_OPENAL_REQ_ALURE_VERSION@)
+       , libglibmm-2.4-dev (>= @STMM_INPUT_OPENAL_REQ_GLIBMM_VERSION@)
+       , ${misc:Depends}
+Recommends: libstmm-input-gtk-dm-dev
+Description: Device input event library - open-al sound playback
+ Extensible device input event library for C++ (C++14).
+ .
+ This library provides an open-al device manager that handles OpenAL playback
+ devices such as plugged in ear phones, etc.
+ The exposed devices implement the interfaces defined in libstmm-input-au@STMM_INPUT_AU_MAJOR_VERSION@.
+ .
+ This package contains the development headers for the library found in
+ libstmm-input-openal@STMM_INPUT_OPENAL_MAJOR_VERSION@.
+

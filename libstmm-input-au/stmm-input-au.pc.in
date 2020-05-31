@@ -1,0 +1,17 @@
+# stmm-input-au pkg-config source file
+
+prefix=@STMMI_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: stmm-input-au
+Description: stmm-input based Interfaces for sound playback
+Version: @STMM_INPUT_AU_VERSION@
+URL: http://www.efanomars.com/libraries/stmm-input-au
+# Beware! The space between the library name and the comparison (>=) is necessary!
+Requires: stmm-input >= @STMM_INPUT_AU_REQ_STMM_INPUT_VERSION@
+Conflicts:
+Libs: -L${libdir} -lstmm-input-au
+Cflags: -I${includedir}/stmm-input-au -I${includedir}
+

@@ -1,0 +1,63 @@
+#=====================
+# libstmm-input-openal
+#=====================
+
+Requirements
+------------
+g++ compiler or compatible (>= C++14)
+libalure-dev
+libglibmm-2.4-dev
+libstmm-input-ev (installed)
+libstmm-input-dl (if used as a plug-in)
+
+
+Important notes
+---------------
+If this library is built with static linking it cannot be loaded as a plug-in.
+
+This library installs a 'stmm-input-openal.dlp' file in the directory
+'{installdir}/etc/stmm-input-dl' or '/etc/stmm-input-dl' (if {installdir} is '/usr').
+
+Currently only works with g++.
+
+
+
+Instructions
+------------
+
+From this directory execute the following commands:
+
+  $ mkdir build
+  $ cd build
+
+  $ cmake -D CMAKE_BUILD_TYPE=Release ..
+
+Instead of 'Release' CMAKE_BUILD_TYPE can also be set to
+   'Debug', 'MinSizeRel' or 'RelWithDebInfo'.
+To build the documentation add option (before '..')
+   '-D BUILD_DOCS=ON' to the preceding command.
+To build the tests add option
+   '-D BUILD_TESTING=ON' to the preceding command
+   (read below on how to setup google test).
+To change the default installation directory add definition
+   '-D CMAKE_INSTALL_PREFIX=/home/adam/mylib' to the preceding command.
+
+  $ make
+
+  $ sudo make install
+
+sudo might be omitted in the preceding command if installing to a directory 
+owned by the current user.
+
+  $ sudo ldconfig
+
+
+Alternatively you can just execute the script
+
+  $ ./scripts/install_libstmm-input-openal.py -b=Release -t=On -d=On
+
+setting the parameter(s) to your preferred value (like above).
+
+  $ ./scripts/install_libstmm-input-openal.py  --help
+
+for a description of all available options.
