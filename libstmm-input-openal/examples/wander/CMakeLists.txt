@@ -12,11 +12,11 @@ include(FindPkgConfig)
 find_package(PkgConfig)
 
 # Version
-set(WANDER_VERSION "0.6.0") # !-U-!
+set(WANDER_VERSION "0.7.0") # !-U-!
 
 # Required libraries
 # Beware! The prefix passed to pkg_check_modules(PREFIX ...) shouldn't contain underscores!
-pkg_check_modules(STMMINPUTOPENAL  REQUIRED  stmm-input-openal>=0.6) # !-U-!
+pkg_check_modules(STMMINPUTOPENAL  REQUIRED  stmm-input-openal>=0.7) # !-U-!
 
 pkg_check_modules(GTKMM            REQUIRED  gtkmm-3.0>=3.22.0)
 

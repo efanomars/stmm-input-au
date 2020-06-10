@@ -8,7 +8,9 @@ url='@STMMI_WEBSITE_SECTION@/@STMMI_SOURCE_PROJECT@'
 arch=('x86_64')
 license=('LGPL3')
 
-depends=('stmm-input' 'alure' 'glibmm')
+depends=(
+    'stmm-input>=@STMM_INPUT_OPENAL_REQ_STMM_INPUT_EV_VERSION@'
+    'alure' 'glibmm')
 makedepends=('cmake' 'gcc' 'doxygen' 'graphviz' 'python')
 optdepends=()
 
