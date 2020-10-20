@@ -5,7 +5,7 @@ pkgver=@STMMI_DEBIAN_SRC_VERSION@
 pkgrel=@STMMI_DEBIAN_REVISION@
 pkgdesc="Device input event library - sound playback"
 url='@STMMI_WEBSITE_SECTION@/@STMMI_SOURCE_PROJECT@'
-arch=('x86_64')
+arch=('x86_64' 'i686' 'aarch64')
 license=('LGPL3')
 
 depends=(

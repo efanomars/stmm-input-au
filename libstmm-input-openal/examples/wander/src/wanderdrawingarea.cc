@@ -163,8 +163,8 @@ void WanderDrawingArea::drawShowData(const Cairo::RefPtr<Cairo::Context>& refCc)
 
 	refCc->save();
 	refCc->set_operator(Cairo::OPERATOR_SOURCE);
-	refCc->rectangle(0, 0, nPixW, nPixH);
 	refCc->set_source_rgb(128,128,128);
+	refCc->rectangle(0, 0, nPixW, nPixH);
 	refCc->fill();
 	refCc->restore();
 
@@ -181,8 +181,8 @@ void WanderDrawingArea::drawShowData(const Cairo::RefPtr<Cairo::Context>& refCc)
 
 	refCc->save();
 	refCc->set_operator(Cairo::OPERATOR_SOURCE);
-	refCc->rectangle(nShowPixX + fPixX - 5, nShowPixY + fPixY - 5, 10, 10);
 	refCc->set_source_rgb(128,0,0);
+	refCc->rectangle(nShowPixX + fPixX - 5, nShowPixY + fPixY - 5, 10, 10);
 	refCc->fill();
 	refCc->restore();
 
@@ -204,11 +204,11 @@ void WanderDrawingArea::drawShowData(const Cairo::RefPtr<Cairo::Context>& refCc)
 		}
 		const double fPixX = (fX - m_oWanderData.m_oAreaPos.m_fX) * fScale;
 		const double fPixY = (fFlipY * fY - m_oWanderData.m_oAreaPos.m_fY) * fScale;
-		
+
 		refCc->save();
 		refCc->set_operator(Cairo::OPERATOR_SOURCE);
-		refCc->rectangle(nShowPixX + fPixX - 5, nShowPixY + fPixY - 5, 10, 10);
 		refCc->set_source_rgb(0,0,128);
+		refCc->rectangle(nShowPixX + fPixX - 5, nShowPixY + fPixY - 5, 10, 10);
 		refCc->fill();
 		refCc->restore();
 	}

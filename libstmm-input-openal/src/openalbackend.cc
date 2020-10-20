@@ -115,7 +115,7 @@ std::string Backend::createThread() noexcept
 		// Wait for main thread to create devices
 		{
 			std::unique_lock<std::mutex> oLock(m_oAlCommandMutex);
-			m_oInitialDevicesCreated.wait(oLock, [&](){ return (m_bInitialDevicesCreated != false); });		
+			m_oInitialDevicesCreated.wait(oLock, [&](){ return (m_bInitialDevicesCreated != false); });
 		}
 		//
 //std::cout << "Backend:: openalThread  thread running" << '\n';
@@ -242,7 +242,7 @@ void Backend::openalThreadRun() noexcept
 
 	do {
 		m_oAlCommandsNotEmpty.wait_for(oLock, std::chrono::milliseconds(s_nBaseIntervalMillisec)
-										, [&]{ return (! m_aAlCommands.empty()) || ! m_bIsRunning; });		
+										, [&]{ return (! m_aAlCommands.empty()) || ! m_bIsRunning; });
 		if (! m_bIsRunning) {
 			break;
 		}
@@ -631,7 +631,7 @@ void Backend::openalStop(const AlCommand& oCommand) noexcept
 		return; //--------------------------------------------------------------
 	}
 	auto& oActiveSound = *itActiveSound;
-	
+
 	const ALuint nSourceId = oActiveSound.m_nALSourceId;
 	::alureStopSource(nSourceId, AL_FALSE);
 
@@ -955,7 +955,7 @@ void Backend::openalCheckDeviceNames() noexcept
 			openalRemoveAllDevices();
 			openalCreateAllDevices(true, aDeviceNames, true);
 		} else {
-			// do nothing: if a device is added and removed quickly it might 
+			// do nothing: if a device is added and removed quickly it might
 			// detect it!
 		}
 	}

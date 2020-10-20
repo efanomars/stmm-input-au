@@ -43,7 +43,7 @@ Description: Device input event library - sound playback interfaces (develop)
  and an event type that informs listeners about sound termination.
  .
  This package contains the development headers for the library found in
- libstmm-input-gtk-au@STMM_INPUT_AU_MAJOR_VERSION@.
+ libstmm-input-au@STMM_INPUT_AU_MAJOR_VERSION@.
 
 
 

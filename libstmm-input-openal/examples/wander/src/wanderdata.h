@@ -94,7 +94,7 @@ public:
 
 	struct CapabilityData
 	{
-		shared_ptr<stmi::PlaybackCapability> m_refCapability; // The capability: if null, m_nDeviceId is -1 
+		shared_ptr<stmi::PlaybackCapability> m_refCapability; // The capability: if null, m_nDeviceId is -1
 		int32_t m_nDeviceId = -1; // The id of the device the capability belongs to or -1 (which implies m_refCapability is null)
 		std::vector<std::pair<std::string, int32_t>> m_aFilePathToId; // The filepaths that have a file id for the device capability
 

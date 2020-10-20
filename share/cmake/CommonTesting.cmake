@@ -1,19 +1,19 @@
-# share/cmake/CommonTesting.cmake
+# Copyright © 2017-2020  Stefano Marsili, <stemars@gmx.ch>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public
+# License along with this program; if not, see <http://www.gnu.org/licenses/>
 
-#  Copyright © 2017-2018  Stefano Marsili, <stemars@gmx.ch>
-#
-#  This program is free software: you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation, either version 3 of the License, or
-#  (at your option) any later version.
-#
-#  This program is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
-#
-#  You should have received a copy of the GNU General Public
-#  License along with this program; if not, see <http://www.gnu.org/licenses/>
+# File:   CommonTesting.cmake
 
 # TestFiles              Create test executables for a target library.
 #
@@ -35,7 +35,7 @@
 #                        ex. "stmm-input-ev;stmm-input-gtk". Note: don't prepend 'lib'!
 # STMMI_FAKE_IFACE       bool that tells whether the compiler definition STMI_TESTING_IFACE
 #                        is defined for each test. This can be used to conditionally declare 
-#                        a class method virtual to create mock or fake subclasses.
+#                        a class method virtual to create fake subclasses.
 #                      
 #
 # Implicit paramters (all the project's libraries have to define them):

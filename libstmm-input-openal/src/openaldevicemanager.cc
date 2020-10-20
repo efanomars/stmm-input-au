@@ -220,7 +220,7 @@ void OpenAlDeviceManager::onDeviceAdded(std::string&& sName, int32_t nBackendDev
 	//
 //std::cout << "OpenAlDeviceManager::onDeviceAdded id=" << refNewDevice->Device::getId() << "  dev id=" << refNewDevice->getDeviceId() << '\n';
 	#ifndef NDEBUG
-	const bool bAdded = 
+	const bool bAdded =
 	#endif
 	StdDeviceManager::addDevice(refNewDevice);
 	assert(bAdded);

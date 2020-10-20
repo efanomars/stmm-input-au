@@ -111,6 +111,7 @@ protected:
 	 * @see create()
 	 */
 	OpenAlDeviceManager(bool bEnableEventClasses, const std::vector<Event::Class>& aEnDisableEventClasses) noexcept;
+private:
 	void init(std::unique_ptr<Private::OpenAl::Backend>&& refBackend, shared_ptr<SndMgmtImpl>&& refSndMgmtImpl) noexcept;
 
 	friend class Private::OpenAl::Backend;

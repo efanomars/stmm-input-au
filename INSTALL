@@ -101,7 +101,7 @@ Beware: installing in a non system directory might cause the installed plugin
 to not be found by the libstmm-input-dl library.
 
 The installed libraries and binaries are
-- libstmm-input-snd
+- libstmm-input-au
 - libstmm-input-openal
 
 

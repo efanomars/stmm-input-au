@@ -1,19 +1,19 @@
-# File: libstmm-input-au/CMakeLists.txt
+# Copyright © 2020  Stefano Marsili, <stemars@gmx.ch>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public
+# License along with this program; if not, see <http://www.gnu.org/licenses/>
 
-#  Copyright © 2020  Stefano Marsili, <stemars@gmx.ch>
-#
-#  This program is free software: you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation, either version 3 of the License, or
-#  (at your option) any later version.
-#
-#  This program is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
-#
-#  You should have received a copy of the GNU General Public
-#  License along with this program; if not, see <http://www.gnu.org/licenses/>
+# File:   libstmm-input-au/CMakeLists.txt
 
 cmake_minimum_required(VERSION 3.0)
 
@@ -91,17 +91,17 @@ configure_file("${PROJECT_SOURCE_DIR}/stmm-input-au.pc.in"
 if ($ENV{STMM_CMAKE_COMMENTS})
 message(STATUS "")
 message(STATUS "stmm-input-au was configured with the following options:")
-message(STATUS " STMMI_HEADERS:               ${STMMI_HEADERS}")
-message(STATUS " STMMI_SOURCES:               ${STMMI_SOURCES}")
-message(STATUS " STMMI_AU_EXTRA_INCLUDE_DIRS: ${STMMI_AU_EXTRA_INCLUDE_DIRS}")
-message(STATUS " STMMI_AU_EXTRA_LIBS:         ${STMMI_AU_EXTRA_LIBS}")
-message(STATUS " CMAKE_BUILD_TYPE:            ${CMAKE_BUILD_TYPE}")
-message(STATUS " CMAKE_CXX_COMPILER_ID:       ${CMAKE_CXX_COMPILER_ID}")
-message(STATUS " CMAKE_CXX_COMPILER_VERSION:  ${CMAKE_CXX_COMPILER_VERSION}")
-message(STATUS " CMAKE_CXX_FLAGS:             ${CMAKE_CXX_FLAGS}")
-message(STATUS " install prefix:              ${STMMI_AU_INSTALL_PREFIX}")
-message(STATUS " BUILD_DOCS:                  ${BUILD_DOCS}")
-message(STATUS " BUILD_TESTING:               ${BUILD_TESTING}")
+message(STATUS " STMMI_HEADERS:                  ${STMMI_HEADERS}")
+message(STATUS " STMMI_SOURCES:                  ${STMMI_SOURCES}")
+message(STATUS " STMMINPUTAU_EXTRA_INCLUDE_DIRS: ${STMMINPUTAU_EXTRA_INCLUDE_DIRS}")
+message(STATUS " STMMINPUTAU_EXTRA_LIBRARIES:    ${STMMINPUTAU_EXTRA_LIBRARIES}")
+message(STATUS " CMAKE_BUILD_TYPE:               ${CMAKE_BUILD_TYPE}")
+message(STATUS " CMAKE_CXX_COMPILER_ID:          ${CMAKE_CXX_COMPILER_ID}")
+message(STATUS " CMAKE_CXX_COMPILER_VERSION:     ${CMAKE_CXX_COMPILER_VERSION}")
+message(STATUS " CMAKE_CXX_FLAGS:                ${CMAKE_CXX_FLAGS}")
+message(STATUS " install prefix:                 ${STMMI_INSTALL_PREFIX}")
+message(STATUS " BUILD_DOCS:                     ${BUILD_DOCS}")
+message(STATUS " BUILD_TESTING:                  ${BUILD_TESTING}")
 endif()
 
 # Documentation

@@ -1,21 +1,23 @@
-# File: scripts/priv/debian_src_versions.cmake
+# Copyright © 2020  Stefano Marsili, <stemars@gmx.ch>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public
+# License along with this program; if not, see <http://www.gnu.org/licenses/>
 
-#  Copyright © 2020  Stefano Marsili, <stemars@gmx.ch>
-#
-#  This program is free software: you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation, either version 3 of the License, or
-#  (at your option) any later version.
-#
-#  This program is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
-#
-#  You should have received a copy of the GNU General Public
-#  License along with this program; if not, see <http://www.gnu.org/licenses/>
+# File:   debian_src_versions.cmake
 
-# This has to be run with cmake -DSTMMI_PROJECT_SOURCE_DIR="/home/.../libstmm-input-au" ... -P debian_src_versions.cmake
+
+# This has to be run with
+#   cmake -DSTMMI_PROJECT_SOURCE_DIR="/home/.../libstmm-input-au" ... -P debian_src_versions.cmake
 
 # Parameters:
 #   STMMI_DEBIAN_SRC_FILENAME     The template file name in ${STMMI_DEBIAN_SRC_FROM_DIR}
@@ -24,9 +26,9 @@
 #                                 (ex. "libstmm-input-au@STMM_INPUT_GTK_BT_MAJOR_VERSION@.install"
 #   STMMI_DEBIAN_SRC_FROM_DIR     The absolute path to the directory containing file
 #                                 "${STMMI_DEBIAN_SRC_FILENAME}.in"
-#                                 (ex. .../stmm-input-bt/scripts/priv/debian.orig)
+#                                 (ex. .../stmm-input-au/scripts/priv/debian.orig)
 #   STMMI_DEBIAN_SRC_TO_DIR       The absolute path to the target directory
-#                                 (ex. /tmp/stmm-input-btDeb/stmm-input-bt-0.1/debian)
+#                                 (ex. /tmp/stmm-input-auDeb/stmm-input-au-0.1/debian)
 #   STMMI_DEBIAN_SRC_TMP_1        The absolute path to a unique temporary file used by this function.
 #                                 If empty don't configure file name itself.
 #   STMMI_DEBIAN_SRC_TMP_2        The absolute path to a another unique temporary file used by this function.

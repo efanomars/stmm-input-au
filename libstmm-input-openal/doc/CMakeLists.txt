@@ -1,4 +1,19 @@
-# stmm-input-openal: doc/CMakeLists.txt
+# Copyright © 2020  Stefano Marsili, <stemars@gmx.ch>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public
+# License along with this program; if not, see <http://www.gnu.org/licenses/>
+
+# File:   libstmm-input-openal/doc/CMakeLists.txt
 
 include(FindDoxygen)
 
@@ -8,7 +23,7 @@ if (DOXYGEN_FOUND)
     endif(NOT DOXYGEN_DOT_FOUND) 
 
     include(CommonDoxy)
-    set(STMMI_TEMP_DOC_LIB_LIST "stmm-input-gtk;stmm-input-ev;stmm-input-base;stmm-input")
+    set(STMMI_TEMP_DOC_LIB_LIST "stmm-input-au;stmm-input-ev;stmm-input-base;stmm-input")
     CreateLibDoxy(stmm-input-openal  ${STMM_INPUT_OPENAL_VERSION}  "${STMMI_TEMP_DOC_LIB_LIST}")
 else(DOXYGEN_FOUND)
     add_custom_target(doc COMMAND echo "Doxygen not found")

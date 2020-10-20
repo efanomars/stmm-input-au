@@ -258,7 +258,7 @@ int32_t PlaybackDevice::playSound(int32_t nFileId, double fVolume, bool bLoop, b
 		return oFileNameToId.m_nFileId == nFileId;
 	});
 	if (itFindName == m_aFileNameToIds.end()) {
-		
+
 		const auto itFind = std::find_if(m_aBufferToIds.begin(), m_aBufferToIds.end(), [&](const BufferToId& oBufferToId)
 		{
 			return oBufferToId.m_nFileId == nFileId;
@@ -481,7 +481,7 @@ void PlaybackDevice::onDeviceError(int32_t nSoundId, int32_t nFileId, std::strin
 		return oFileNameToId.m_nFileId == nFileId;
 	});
 	if (itFindName == m_aFileNameToIds.end()) {
-		
+
 		const auto itFind = std::find_if(m_aBufferToIds.begin(), m_aBufferToIds.end(), [&](const BufferToId& oBufferToId)
 		{
 			return oBufferToId.m_nFileId == nFileId;

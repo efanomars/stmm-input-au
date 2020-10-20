@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 
-#  Copyright © 2020  Stefano Marsili, <stemars@gmx.ch>
+# Copyright © 2020  Stefano Marsili, <stemars@gmx.ch>
 #
-#  This program is free software: you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation, either version 3 of the License, or
-#  (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
 #
-#  This program is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
 #
-#  You should have received a copy of the GNU General Public
-#  License along with this program; if not, see <http://www.gnu.org/licenses/>
+# You should have received a copy of the GNU General Public
+# License along with this program; if not, see <http://www.gnu.org/licenses/>
 
 # File:   testall.py
 
@@ -113,6 +113,10 @@ def main():
 		elif sAnswer.casefold() == "no":
 			return #-----------------------------------------------------------
 
+	print("-----------------------------------")
+	print("testall.py (stmm-input-au) started!")
+	print("-----------------------------------")
+
 	sInstallDir = os.path.abspath(os.path.expanduser(oArgs.sInstallDir))
 
 	sScriptDir = os.path.dirname(os.path.abspath(__file__))
@@ -166,9 +170,9 @@ def main():
 			if oArgs.bTidy and not bTidyDone:
 				checkTidy()
 
-	print("---------------------------------")
-	print("testall.py finished successfully!")
-	print("---------------------------------")
+	print("-------------------------------------------------")
+	print("testall.py (stmm-input-au) finished successfully!")
+	print("-------------------------------------------------")
 
 
 if __name__ == "__main__":

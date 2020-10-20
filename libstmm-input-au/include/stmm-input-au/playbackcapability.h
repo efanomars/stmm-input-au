@@ -131,7 +131,7 @@ public:
 	SoundData playSound(uint8_t* p0Buffer, int32_t nBufferSize) noexcept;
 	/** Play previously played or pre-loaded file or buffer at current listener position.
 	 * The sound is played at maximum volume.
-	 * 
+	 *
 	 * The nFileId is only valid within the instance that created it.
 	 * @param nFileId The id of the previously played file or buffer to play as a new sound.
 	 * @return The sound id or negative if error.
