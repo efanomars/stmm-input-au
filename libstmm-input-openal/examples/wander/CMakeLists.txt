@@ -12,10 +12,10 @@ include(FindPkgConfig)
 find_package(PkgConfig)
 
 # Version
-set(WANDER_VERSION "0.8") # !-U-!
+set(WANDER_VERSION "0.9") # !-U-!
 
 # Required libraries
-set(WANDER_REQ_STMM_INPUT_OPENAL_VERSION "0.8") # !-U-!
+set(WANDER_REQ_STMM_INPUT_OPENAL_VERSION "0.9") # !-U-!
 
 # Beware! The prefix passed to pkg_check_modules(PREFIX ...) shouldn't contain underscores!
 pkg_check_modules(STMMINPUTOPENAL  REQUIRED  stmm-input-openal>=${WANDER_REQ_STMM_INPUT_OPENAL_VERSION})

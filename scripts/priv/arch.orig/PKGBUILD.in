@@ -11,7 +11,7 @@ license=('LGPL3')
 depends=(
     'stmm-input>=@STMM_INPUT_OPENAL_REQ_STMM_INPUT_EV_VERSION@'
     'alure' 'glibmm')
-makedepends=('cmake' 'gcc' 'doxygen' 'graphviz' 'python')
+makedepends=('cmake' 'doxygen' 'graphviz' 'python')
 optdepends=()
 
 #provides=("@STMMI_SOURCE_PROJECT@")

@@ -1,3 +1,10 @@
+stmm-input-au (0.9) unstable; urgency=low
+
+  * Remove gcc from PKGBUILD (requested by AUR)
+  * Increase minor version
+
+ -- Stefano Marsili <efanomars@gmx.ch>  Thu, 22 Oct 2020 19:29:39 +0100
+
 stmm-input-au (0.8) unstable; urgency=low
 
   * Fix dates
